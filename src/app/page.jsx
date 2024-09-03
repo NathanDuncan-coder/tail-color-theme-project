@@ -1,13 +1,20 @@
+"use client"
 import React from 'react';
 import TailwindColorDisplay from './TailwindColorDisplay';
 import tailwindConfig from '../../tailwind.config';
-
+import { useState } from 'react';
 const App = () => {
   const colors = tailwindConfig.theme.colors;
 
+  const [darkMode, setDarkMode] = useState(false);
+
+  const handleToggleDarkMode = () => {
+    setDarkMode(prevMode => !prevMode);
+  };
+
   return (
     <div>
-      <TailwindColorDisplay colors={colors} />
+      <TailwindColorDisplay colors={colors} darkMode={darkMode} handleToggleDarkMode={handleToggleDarkMode}/>
     </div>
   );
 };
