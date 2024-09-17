@@ -37,7 +37,7 @@ const SavedColorButton = ({ palette, darkMode }) => {
         >
           {savedColorSections.map((colorSection, sectionIndex) => (
             <div key={sectionIndex} className="mb-4">
-              <h4 className="text-lg font-bold mb-2">Color Palette {sectionIndex + 1}</h4>
+              <h4 className="text-lg text-black font-bold mb-2">Color Palette {sectionIndex + 1}</h4>
               <ul>
                 {colorSection.map((color, colorIndex) => (
                   <li key={colorIndex} className="text-sm">
